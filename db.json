@@ -1,0 +1,12 @@
+{
+  "mails": [
+    {
+      "id": 1,
+      "from": "aaa@example.com",
+      "to": "yyy@example.com",
+      "subject": "[ HR-888 ] Notice of official announcement",
+      "attachment": false,
+      "date": "2019/12/31"
+    }
+  ]
+}
