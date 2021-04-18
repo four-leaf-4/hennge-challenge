@@ -3,10 +3,10 @@
     {
       "id": 1,
       "from": "aaa@example.com",
-      "to": "yyy@example.com",
+      "to": ["yyy@example.com", "zzz@example.com"],
       "subject": "[ HR-888 ] Notice of official announcement",
-      "attachment": false,
-      "date": "2019/12/31"
+      "attachment": true,
+      "date": "2020-04-21T01:25:35"
     }
   ]
 }

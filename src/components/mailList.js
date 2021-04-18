@@ -1,11 +1,15 @@
 import 'date-fns';
-import React from 'react';
-import { Typography, Box } from '@material-ui/core';
+import React, { useContext } from 'react';
+import { Typography } from '@material-ui/core';
 import { DataGrid } from '@material-ui/data-grid';
 import { useStyles } from '../styles/useStyles';
+import { MailsContext } from '../context/';
 
 export const MailList = () => {
   const classes = useStyles();
+  const { mails } = useContext(MailsContext);
+  const rows = mails;
+
   const columns = [
     {
       field: 'from',
@@ -85,7 +89,7 @@ export const MailList = () => {
         const mailYear = params.value.getFullYear();
         const mailMonth = params.value.getMonth() + 1;
         const mailDate = params.value.getDate();
-        console.log(today);
+
         if (
           thisYear === mailYear &&
           thisMonth === mailMonth &&
@@ -115,16 +119,6 @@ export const MailList = () => {
     },
   ];
 
-  const rows = [
-    {
-      id: 1,
-      from: 'aaa@example.com',
-      to: ['zzz.zzz@example.com', 'zzz.zzz@example.com'],
-      subject: '[ HR-888 ] Notice of official announcement',
-      attachment: true,
-      date: new Date('2021-04-10T11:34:00'),
-    },
-  ];
   const ImageLogo = () => {
     return (
       <img
