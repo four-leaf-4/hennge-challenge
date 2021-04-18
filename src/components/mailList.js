@@ -1,15 +1,23 @@
 import 'date-fns';
 import React from 'react';
-import { Typography } from '@material-ui/core';
+import { Typography, Box } from '@material-ui/core';
 import { DataGrid } from '@material-ui/data-grid';
+import { useStyles } from '../styles/useStyles';
 
 export const MailList = () => {
+  const classes = useStyles();
   const columns = [
-    { field: 'from', headerName: 'From', width: 300 },
+    {
+      field: 'from',
+      headerName: 'From',
+      flex: 1,
+      headerClassName: 'super-app-theme--header',
+    },
     {
       field: 'to',
       headerName: 'to',
-      width: 300,
+      flex: 1,
+      headerClassName: 'super-app-theme--header',
       renderCell: (params) => {
         if (params.value.length >= 2) {
           return (
@@ -27,22 +35,24 @@ export const MailList = () => {
     {
       field: 'subject',
       headerName: 'Subject',
-      width: 400,
+      flex: 2,
+      headerClassName: 'super-app-theme--header',
       renderCell: (params) => {
-        console.log(params.value);
-        const Icon = () => {
-          if (params.value.attachment) {
-            return <img src={`images/icon_clip.svg`} width={16} height={16} />;
-          } else {
-            return <></>;
-          }
-        };
-        return (
-          <>
-            <Typography>{params.value.headline}</Typography>
-            <Icon />
-          </>
-        );
+        return <Typography>{params.value}</Typography>;
+      },
+    },
+    {
+      field: 'attachment',
+      headerName: '',
+      headerClassName: 'super-app-theme--header',
+      flex: 0.5,
+      align: 'center',
+      renderCell: (params) => {
+        if (params.value) {
+          return <img src={`images/icon_clip.svg`} width={16} height={16} />;
+        } else {
+          return <></>;
+        }
       },
     },
     {
@@ -50,7 +60,8 @@ export const MailList = () => {
       headerName: 'Date',
       description: 'Date',
       sortable: true,
-      width: 160,
+      flex: 0.5,
+      headerClassName: 'super-app-theme--header',
       renderCell: (params) => {
         const month_english_list = [
           'Jan',
@@ -109,17 +120,44 @@ export const MailList = () => {
       id: 1,
       from: 'aaa@example.com',
       to: ['zzz.zzz@example.com', 'zzz.zzz@example.com'],
-      subject: {
-        headline: '[ HR-888 ] Notice of official announcement',
-        attachment: true,
-      },
+      subject: '[ HR-888 ] Notice of official announcement',
+      attachment: true,
       date: new Date('2021-04-10T11:34:00'),
     },
   ];
-
+  const ImageLogo = () => {
+    return (
+      <img
+        src="images/logo.png"
+        width={117}
+        height={124}
+        style={{
+          position: 'absolute',
+          top: 0,
+          left: 0,
+          bottom: 0,
+          right: 0,
+          margin: 'auto',
+        }}
+      />
+    );
+  };
   return (
-    <div style={{ height: 800, width: '100%' }}>
-      <DataGrid rows={rows} columns={columns} pageSize={10} />
+    <div
+      style={{ display: 'flex', height: '100%' }}
+      className={classes.bgheader}
+    >
+      <div style={{ height: 520, width: '100%' }}>
+        <DataGrid
+          rows={rows}
+          columns={columns}
+          pageSize={10}
+          className={classes.maillist}
+          components={{
+            NoRowsOverlay: ImageLogo,
+          }}
+        />
+      </div>{' '}
     </div>
   );
 };

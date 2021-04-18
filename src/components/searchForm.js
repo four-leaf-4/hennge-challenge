@@ -1,20 +1,21 @@
 import 'date-fns';
-import React from 'react';
-import { Grid, Button } from '@material-ui/core';
+import React, { useContext } from 'react';
+import { Grid, IconButton } from '@material-ui/core';
 import DateFnsUtils from '@date-io/date-fns';
 import {
   MuiPickersUtilsProvider,
   KeyboardDatePicker,
 } from '@material-ui/pickers';
+import { useStyles } from '../styles/useStyles';
+import { StartDateContext, EndDateContext } from '../context/';
 
 export const SearchForm = () => {
-  const [startSelectedDate, setStartSelectedDate] = React.useState(
-    new Date('2020-01-01T00:00:00')
+  const classes = useStyles();
+  const { startSelectedDate, setStartSelectedDate } = useContext(
+    StartDateContext
   );
 
-  const [endSelectedDate, setEndSelectedDate] = React.useState(
-    new Date('2020-01-01T00:00:00')
-  );
+  const { endSelectedDate, setEndSelectedDate } = useContext(EndDateContext);
 
   const handleStartDateChange = (date) => {
     setStartSelectedDate(date);
@@ -25,7 +26,7 @@ export const SearchForm = () => {
 
   return (
     <MuiPickersUtilsProvider utils={DateFnsUtils}>
-      <Grid container justify="space-around" alignItems="center">
+      <Grid container justify="flex-start" alignItems="center">
         <KeyboardDatePicker
           disableToolbar
           variant="inline"
@@ -60,9 +61,9 @@ export const SearchForm = () => {
           }
           InputAdornmentProps={{ position: 'start' }}
         />
-        <Button variant="contained">
+        <IconButton variant="contained" className={classes.searchButton}>
           <img src={`images/icon_search.svg`} width={16} height={16} />
-        </Button>
+        </IconButton>
       </Grid>
     </MuiPickersUtilsProvider>
   );
