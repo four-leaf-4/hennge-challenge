@@ -4,9 +4,121 @@
       "id": 1,
       "from": "aaa@example.com",
       "to": ["yyy@example.com", "zzz@example.com"],
-      "subject": "[ HR-888 ] Notice of official announcement",
-      "attachment": true,
+      "subject": {
+        "headline": "[ HR-888 ] Notice of official announcement",
+        "attachment": true
+      },
+      "date": "2021-04-19T01:25:35"
+    },
+    {
+      "id": 2,
+      "from": "aaa@example.com",
+      "to": ["yyy@example.com", "zzz@example.com"],
+      "subject": {
+        "headline": "[ HR-888 ] Notice of official announcement",
+        "attachment": true
+      },
+      "date": "2021-04-21T01:25:35"
+    },
+    {
+      "id": 3,
+      "from": "aaa@example.com",
+      "to": ["yyy@example.com", "zzz@example.com"],
+      "subject": {
+        "headline": "[ HR-888 ] Notice of official announcement",
+        "attachment": true
+      },
+      "date": "2021-04-21T01:25:35"
+    },
+    {
+      "id": 4,
+      "from": "aaa@example.com",
+      "to": ["yyy@example.com", "zzz@example.com"],
+      "subject": {
+        "headline": "[ HR-888 ] Notice of official announcement",
+        "attachment": true
+      },
       "date": "2020-04-21T01:25:35"
+    },
+    {
+      "id": 5,
+      "from": "aaa@example.com",
+      "to": ["yyy@example.com", "zzz@example.com"],
+      "subject": {
+        "headline": "[ HR-888 ] Notice of official announcement",
+        "attachment": true
+      },
+      "date": "2020-04-21T01:25:35"
+    },
+    {
+      "id": 6,
+      "from": "aaa@example.com",
+      "to": ["yyy@example.com", "zzz@example.com"],
+      "subject": {
+        "headline": "[ HR-888 ] Notice of official announcement",
+        "attachment": true
+      },
+      "date": "2020-04-21T01:25:35"
+    },
+    {
+      "id": 7,
+      "from": "aaa@example.com",
+      "to": ["yyy@example.com", "zzz@example.com"],
+      "subject": {
+        "headline": "[ HR-888 ] Notice of official announcement",
+        "attachment": true
+      },
+      "date": "2019-04-21T01:25:35"
+    },
+    {
+      "id": 8,
+      "from": "aaa@example.com",
+      "to": ["yyy@example.com", "zzz@example.com"],
+      "subject": {
+        "headline": "[ HR-888 ] Notice of official announcement",
+        "attachment": true
+      },
+      "date": "2018-04-21T01:25:35"
+    },
+    {
+      "id": 9,
+      "from": "aaa@example.com",
+      "to": ["yyy@example.com", "zzz@example.com"],
+      "subject": {
+        "headline": "[ HR-888 ] Notice of official announcement",
+        "attachment": true
+      },
+      "date": "2017-04-21T01:25:35"
+    },
+    {
+      "id": 10,
+      "from": "aaa@example.com",
+      "to": ["yyy@example.com", "zzz@example.com"],
+      "subject": {
+        "headline": "[ HR-888 ] Notice of official announcement",
+        "attachment": true
+      },
+      "date": "2016-04-21T01:25:35"
+    },
+    {
+      "id": 11,
+      "from": "aaa@example.com",
+      "to": ["yyy@example.com", "zzz@example.com"],
+      "subject": {
+        "headline": "[ HR-888 ] Notice of official announcement",
+        "attachment": true
+      },
+      "date": "2015-04-21T01:25:35"
+    },
+    {
+      "id": 12,
+      "from": "aaa@example.com",
+      "to": ["yyy@example.com", "zzz@example.com"],
+      "subject": {
+        "headline": "[ HR-888 ] Notice of official announcement",
+        "attachment": true
+      },
+      "date": "2014-04-21T01:25:35"
     }
   ]
 }

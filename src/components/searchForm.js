@@ -7,7 +7,7 @@ import {
   KeyboardDatePicker,
 } from '@material-ui/pickers';
 import { useStyles } from '../styles/useStyles';
-import { StartDateContext, EndDateContext } from '../context/';
+import { StartDateContext, EndDateContext, MailsContext } from '../context/';
 
 export const SearchForm = () => {
   const classes = useStyles();
@@ -22,6 +22,10 @@ export const SearchForm = () => {
   };
   const handleEndDateChange = (date) => {
     setEndSelectedDate(date);
+  };
+  const { hundleFilter } = useContext(MailsContext);
+  const clickSearchBtn = () => {
+    hundleFilter();
   };
 
   return (
@@ -61,7 +65,11 @@ export const SearchForm = () => {
           }
           InputAdornmentProps={{ position: 'start' }}
         />
-        <IconButton variant="contained" className={classes.searchButton}>
+        <IconButton
+          variant="contained"
+          className={classes.searchButton}
+          onClick={clickSearchBtn}
+        >
           <img src={`images/icon_search.svg`} width={16} height={16} />
         </IconButton>
       </Grid>

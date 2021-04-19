@@ -1,14 +1,13 @@
 import 'date-fns';
-import React, { useContext } from 'react';
-import { Typography } from '@material-ui/core';
+import React, { useContext, useEffect, useState } from 'react';
+import { Typography, Box } from '@material-ui/core';
 import { DataGrid } from '@material-ui/data-grid';
 import { useStyles } from '../styles/useStyles';
 import { MailsContext } from '../context/';
 
 export const MailList = () => {
   const classes = useStyles();
-  const { mails } = useContext(MailsContext);
-  const rows = mails;
+  const { mails, filterMails, rows } = useContext(MailsContext);
 
   const columns = [
     {
@@ -42,20 +41,22 @@ export const MailList = () => {
       flex: 2,
       headerClassName: 'super-app-theme--header',
       renderCell: (params) => {
-        return <Typography>{params.value}</Typography>;
-      },
-    },
-    {
-      field: 'attachment',
-      headerName: '',
-      headerClassName: 'super-app-theme--header',
-      flex: 0.5,
-      align: 'center',
-      renderCell: (params) => {
-        if (params.value) {
-          return <img src={`images/icon_clip.svg`} width={16} height={16} />;
+        if (params.value.attachment) {
+          return (
+            <Box
+              display={'flex'}
+              justifyContent={'space-between'}
+              alignItems={'center'}
+              width={'100%'}
+            >
+              <Typography>{params.value.headline}</Typography>
+              <Box>
+                <img src={`images/icon_clip.svg`} width={16} height={16} />
+              </Box>
+            </Box>
+          );
         } else {
-          return <></>;
+          return <Typography>{params.value.headline}</Typography>;
         }
       },
     },
@@ -136,19 +137,27 @@ export const MailList = () => {
       />
     );
   };
+
+  const IconUpward = () => {
+    return <img src="images/icon_arrow01.svg" width={8} height={8} />;
+  };
+
   return (
     <div
       style={{ display: 'flex', height: '100%' }}
       className={classes.bgheader}
     >
-      <div style={{ height: 520, width: '100%' }}>
+      <div style={{ width: '100%' }}>
         <DataGrid
+          autoHeight={true}
           rows={rows}
           columns={columns}
           pageSize={10}
           className={classes.maillist}
           components={{
             NoRowsOverlay: ImageLogo,
+            ColumnSortedAscendingIcon: IconUpward,
+            ColumnSortedDescendingIcon: IconUpward,
           }}
         />
       </div>{' '}
