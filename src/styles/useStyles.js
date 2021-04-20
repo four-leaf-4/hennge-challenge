@@ -1,7 +1,8 @@
 import { makeStyles } from '@material-ui/core/styles';
 
-const colors = {
+export const colors = {
   lightgrey: '#e6e6e6',
+  darkgrey: 'rgb(120 120 120)',
 };
 
 function customCheckbox(theme) {

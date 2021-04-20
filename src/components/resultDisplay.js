@@ -8,7 +8,10 @@ export const ResultDisplay = () => {
   const mailcounts = mails ? mails.length : 0;
   return (
     <>
-      <Typography>result: {mailcounts} mail(s)</Typography>
+      <Typography>
+        Result: <span style={{ fontSize: '1.25rem' }}>{mailcounts}</span>{' '}
+        mail(s)
+      </Typography>
       <Divider />
     </>
   );

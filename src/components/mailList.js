@@ -4,6 +4,7 @@ import { Typography, Box } from '@material-ui/core';
 import { DataGrid } from '@material-ui/data-grid';
 import { useStyles } from '../styles/useStyles';
 import { MailsContext } from '../context/';
+import { colors } from '../styles/useStyles';
 
 export const MailList = () => {
   const classes = useStyles();
@@ -27,7 +28,17 @@ export const MailList = () => {
             <>
               <Typography>{params.value[0]}</Typography>
               <Typography>...</Typography>
-              <Typography>+{params.value.length - 1}</Typography>
+              <Typography
+                style={{
+                  fontSize: '0.5rem',
+                  backgroundColor: colors.darkgrey,
+                  color: '#fff',
+                  padding: '0 5px',
+                  borderRadius: '2px',
+                }}
+              >
+                +{params.value.length - 1}
+              </Typography>
             </>
           );
         } else {
