@@ -1,13 +1,18 @@
 import 'date-fns';
 import React, { useContext } from 'react';
-import { Grid, IconButton } from '@material-ui/core';
+import { Grid, IconButton, TextField } from '@material-ui/core';
 import DateFnsUtils from '@date-io/date-fns';
 import {
   MuiPickersUtilsProvider,
   KeyboardDatePicker,
 } from '@material-ui/pickers';
 import { useStyles } from '../styles/useStyles';
-import { StartDateContext, EndDateContext, MailsContext } from '../context/';
+import {
+  StartDateContext,
+  EndDateContext,
+  MailsContext,
+  SearchSubjectContext,
+} from '../context/';
 
 export const SearchForm = () => {
   const classes = useStyles();
@@ -16,6 +21,7 @@ export const SearchForm = () => {
   );
 
   const { endSelectedDate, setEndSelectedDate } = useContext(EndDateContext);
+  const { searchText, setSearchText } = useContext(SearchSubjectContext);
 
   const handleStartDateChange = (date) => {
     setStartSelectedDate(date);
@@ -28,8 +34,20 @@ export const SearchForm = () => {
     hundleFilter();
   };
 
+  const inputSearchText = (e) => {
+    const { value } = e.target;
+    setSearchText(value);
+  };
+
   return (
     <MuiPickersUtilsProvider utils={DateFnsUtils}>
+      <form className={classes.root} noValidate autoComplete="off">
+        <TextField
+          id="search-subject"
+          label="search subject"
+          onChange={inputSearchText}
+        />
+      </form>
       <Grid container justify="flex-start" alignItems="center">
         <KeyboardDatePicker
           disableToolbar
@@ -65,6 +83,7 @@ export const SearchForm = () => {
           }
           InputAdornmentProps={{ position: 'start' }}
         />
+
         <IconButton
           variant="contained"
           className={classes.searchButton}

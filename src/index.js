@@ -4,16 +4,19 @@ import {
   StartDateContextProvider,
   EndDateContextProvider,
   MailsContextProvider,
+  SearchSubjectContextProvider,
 } from './context/';
 import App from './App';
 
 render(
-  <StartDateContextProvider>
-    <EndDateContextProvider>
-      <MailsContextProvider>
-        <App />
-      </MailsContextProvider>
-    </EndDateContextProvider>
-  </StartDateContextProvider>,
+  <SearchSubjectContextProvider>
+    <StartDateContextProvider>
+      <EndDateContextProvider>
+        <MailsContextProvider>
+          <App />
+        </MailsContextProvider>
+      </EndDateContextProvider>
+    </StartDateContextProvider>
+  </SearchSubjectContextProvider>,
   document.getElementById('root')
 );

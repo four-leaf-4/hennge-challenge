@@ -15,7 +15,7 @@
       "from": "aaa@example.com",
       "to": ["yyy@example.com", "zzz@example.com"],
       "subject": {
-        "headline": "[ HR-888 ] Notice of official announcement",
+        "headline": "[web:333] ”Web Contact”",
         "attachment": true
       },
       "date": "2021-04-21T01:25:35"
@@ -25,47 +25,47 @@
       "from": "aaa@example.com",
       "to": ["yyy@example.com", "zzz@example.com"],
       "subject": {
-        "headline": "[ HR-888 ] Notice of official announcement",
+        "headline": "Happy New Year! Greetings for the New Year.",
         "attachment": true
       },
-      "date": "2021-04-21T01:25:35"
+      "date": "2021-01-01T00:00:00"
     },
     {
       "id": 4,
       "from": "aaa@example.com",
       "to": ["yyy@example.com", "zzz@example.com"],
       "subject": {
-        "headline": "[ HR-888 ] Notice of official announcement",
+        "headline": "[HR-887(Revised: Office Expansion Project Team)] Notice of off.",
         "attachment": true
       },
-      "date": "2020-04-21T01:25:35"
+      "date": "2020-12-25T01:25:35"
     },
     {
       "id": 5,
       "from": "aaa@example.com",
       "to": ["yyy@example.com", "zzz@example.com"],
       "subject": {
-        "headline": "[ HR-888 ] Notice of official announcement",
+        "headline": "Github] Logout page",
         "attachment": true
       },
-      "date": "2020-04-21T01:25:35"
+      "date": "2020-10-01T01:25:35"
     },
     {
       "id": 6,
       "from": "aaa@example.com",
       "to": ["yyy@example.com", "zzz@example.com"],
       "subject": {
-        "headline": "[ HR-888 ] Notice of official announcement",
+        "headline": "［dev］ Postfix 3.1.12 / 3.2.9 / 3.3.4 / 3.4.5",
         "attachment": true
       },
-      "date": "2020-04-21T01:25:35"
+      "date": "2020-02-15T01:25:35"
     },
     {
       "id": 7,
       "from": "aaa@example.com",
       "to": ["yyy@example.com", "zzz@example.com"],
       "subject": {
-        "headline": "[ HR-888 ] Notice of official announcement",
+        "headline": "Re: [Github] Brush-up on loading animation",
         "attachment": true
       },
       "date": "2019-04-21T01:25:35"
@@ -75,7 +75,7 @@
       "from": "aaa@example.com",
       "to": ["yyy@example.com", "zzz@example.com"],
       "subject": {
-        "headline": "[ HR-888 ] Notice of official announcement",
+        "headline": "Workplace Summary for sample, Inc.: Jun 2 - Jun 9",
         "attachment": true
       },
       "date": "2018-04-21T01:25:35"
@@ -85,7 +85,7 @@
       "from": "aaa@example.com",
       "to": ["yyy@example.com", "zzz@example.com"],
       "subject": {
-        "headline": "[ HR-888 ] Notice of official announcement",
+        "headline": "I love you",
         "attachment": true
       },
       "date": "2017-04-21T01:25:35"
@@ -95,7 +95,7 @@
       "from": "aaa@example.com",
       "to": ["yyy@example.com", "zzz@example.com"],
       "subject": {
-        "headline": "[ HR-888 ] Notice of official announcement",
+        "headline": "[info:888] ABC EQUIPMENT COMPANY",
         "attachment": true
       },
       "date": "2016-04-21T01:25:35"
