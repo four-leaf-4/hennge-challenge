@@ -14,13 +14,13 @@ export const MailList = () => {
     {
       field: 'from',
       headerName: 'From',
-      flex: 1,
+      flex: 0.1,
       headerClassName: 'super-app-theme--header',
     },
     {
       field: 'to',
       headerName: 'to',
-      flex: 1,
+      flex: 0.1,
       headerClassName: 'super-app-theme--header',
       renderCell: (params) => {
         if (params.value.length >= 2) {
@@ -49,7 +49,7 @@ export const MailList = () => {
     {
       field: 'subject',
       headerName: 'Subject',
-      flex: 2,
+      flex: 0.2,
       headerClassName: 'super-app-theme--header',
       renderCell: (params) => {
         if (params.value.attachment) {
@@ -74,9 +74,9 @@ export const MailList = () => {
     {
       field: 'date',
       headerName: 'Date',
+      flex: 0.1,
       description: 'Date',
       sortable: true,
-      flex: 0.5,
       headerClassName: 'super-app-theme--header',
       renderCell: (params) => {
         const month_english_list = [
